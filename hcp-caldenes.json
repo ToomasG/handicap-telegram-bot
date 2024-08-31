@@ -1,0 +1,327 @@
+[
+  {
+    "Desde": "+5,0",
+    "Hasta": "+4,5",
+    "value": "+6"
+  },
+  {
+    "Desde": "+4,4",
+    "Hasta": "+3,8",
+    "value": "+5"
+  },
+  {
+    "Desde": "+3,4",
+    "Hasta": "+2,6",
+    "value": "+4"
+  },
+  {
+    "Desde": "+2,5",
+    "Hasta": "+1,7",
+    "value": "+3"
+  },
+  {
+    "Desde": "+1,6",
+    "Hasta": "+0,8",
+    "value": "+2"
+  },
+  {
+    "Desde": "+0,7",
+    "Hasta": "+0,1",
+    "value": "+1"
+  },
+  {
+    "Desde": "0,0",
+    "Hasta": "1,1",
+    "value": "0"
+  },
+  {
+    "Desde": "1,2",
+    "Hasta": "2,0",
+    "value": "1"
+  },
+  {
+    "Desde": "2,1",
+    "Hasta": "2,9",
+    "value": "2"
+  },
+  {
+    "Desde": "3,0",
+    "Hasta": "3,8",
+    "value": "3"
+  },
+  {
+    "Desde": "3,9",
+    "Hasta": "4,7",
+    "value": "4"
+  },
+  {
+    "Desde": "4,8",
+    "Hasta": "5,6",
+    "value": "5"
+  },
+  {
+    "Desde": "5,7",
+    "Hasta": "6,6",
+    "value": "6"
+  },
+  {
+    "Desde": "6,7",
+    "Hasta": "7,5",
+    "value": "7"
+  },
+  {
+    "Desde": "7,6",
+    "Hasta": "8,4",
+    "value": "8"
+  },
+  {
+    "Desde": "8,5",
+    "Hasta": "9,3",
+    "value": "9"
+  },
+  {
+    "Desde": "9,4",
+    "Hasta": "10,2",
+    "value": "10"
+  },
+  {
+    "Desde": "10,3",
+    "Hasta": "11,2",
+    "value": "11"
+  },
+  {
+    "Desde": "11,3",
+    "Hasta": "12,1",
+    "value": "12"
+  },
+  {
+    "Desde": "12,2",
+    "Hasta": "13,0",
+    "value": "13"
+  },
+  {
+    "Desde": "13,1",
+    "Hasta": "13,9",
+    "value": "14"
+  },
+  {
+    "Desde": "14,0",
+    "Hasta": "14,8",
+    "value": "15"
+  },
+  {
+    "Desde": "14,9",
+    "Hasta": "15,8",
+    "value": "16"
+  },
+  {
+    "Desde": "15,9",
+    "Hasta": "16,7",
+    "value": "17"
+  },
+  {
+    "Desde": "16,8",
+    "Hasta": "17,6",
+    "value": "18"
+  },
+  {
+    "Desde": "17,7",
+    "Hasta": "18,5",
+    "value": "19"
+  },
+  {
+    "Desde": "18,6",
+    "Hasta": "19,4",
+    "value": "20"
+  },
+  {
+    "Desde": "19,5",
+    "Hasta": "20,3",
+    "value": "21"
+  },
+  {
+    "Desde": "20,4",
+    "Hasta": "21,3",
+    "value": "22"
+  },
+  {
+    "Desde": "21,4",
+    "Hasta": "22,2",
+    "value": "23"
+  },
+  {
+    "Desde": "22,3",
+    "Hasta": "23,1",
+    "value": "24"
+  },
+  {
+    "Desde": "23,2",
+    "Hasta": "24,0",
+    "value": "25"
+  },
+  {
+    "Desde": "24,1",
+    "Hasta": "24,9",
+    "value": "26"
+  },
+  {
+    "Desde": "25,0",
+    "Hasta": "25,9",
+    "value": "27"
+  },
+  {
+    "Desde": "26,0",
+    "Hasta": "26,8",
+    "value": "28"
+  },
+  {
+    "Desde": "26,9",
+    "Hasta": "27,7",
+    "value": "29"
+  },
+  {
+    "Desde": "27,8",
+    "Hasta": "28,6",
+    "value": "30"
+  },
+  {
+    "Desde": "28,7",
+    "Hasta": "29,5",
+    "value": "31"
+  },
+  {
+    "Desde": "29,6",
+    "Hasta": "30,5",
+    "value": "32"
+  },
+  {
+    "Desde": "30,6",
+    "Hasta": "31,4",
+    "value": "33"
+  },
+  {
+    "Desde": "31,5",
+    "Hasta": "32,3",
+    "value": "34"
+  },
+  {
+    "Desde": "32,4",
+    "Hasta": "33,2",
+    "value": "35"
+  },
+  {
+    "Desde": "33,3",
+    "Hasta": "34,1",
+    "value": "36"
+  },
+  {
+    "Desde": "34,2",
+    "Hasta": "35,0",
+    "value": "37"
+  },
+  {
+    "Desde": "35,1",
+    "Hasta": "36,0",
+    "value": "38"
+  },
+  {
+    "Desde": "36,1",
+    "Hasta": "36,9",
+    "value": "39"
+  },
+  {
+    "Desde": "37,0",
+    "Hasta": "37,9",
+    "value": "40"
+  },
+  {
+    "Desde": "38,0",
+    "Hasta": "38,8",
+    "value": "41"
+  },
+  {
+    "Desde": "38,9",
+    "Hasta": "39,7",
+    "value": "42"
+  },
+  {
+    "Desde": "39,8",
+    "Hasta": "40,6",
+    "value": "43"
+  },
+  {
+    "Desde": "40,7",
+    "Hasta": "41,5",
+    "value": "44"
+  },
+  {
+    "Desde": "41,6",
+    "Hasta": "42,4",
+    "value": "45"
+  },
+  {
+    "Desde": "42,5",
+    "Hasta": "43,3",
+    "value": "46"
+  },
+  {
+    "Desde": "43,4",
+    "Hasta": "44,2",
+    "value": "47"
+  },
+  {
+    "Desde": "44,3",
+    "Hasta": "45,2",
+    "value": "48"
+  },
+  {
+    "Desde": "45,3",
+    "Hasta": "46,1",
+    "value": "49"
+  },
+  {
+    "Desde": "46,2",
+    "Hasta": "47,0",
+    "value": "50"
+  },
+  {
+    "Desde": "47,1",
+    "Hasta": "47,9",
+    "value": "51"
+  },
+  {
+    "Desde": "48.0",
+    "Hasta": "48.8",
+    "value": "52"
+  },
+  {
+    "Desde": "48.9",
+    "Hasta": "49.7",
+    "value": "53"
+  },
+  {
+    "Desde": "49.8",
+    "Hasta": "50.7",
+    "value": "54"
+  },
+  {
+    "Desde": "50.8",
+    "Hasta": "51.6",
+    "value": "55"
+  },
+  {
+    "Desde": "51.7",
+    "Hasta": "52.5",
+    "value": "56"
+  },
+  {
+    "Desde": "52.6",
+    "Hasta": "53.4",
+    "value": "57"
+  },
+  {
+    "Desde": "53.5",
+    "Hasta": "54.0",
+    "value": "58"
+  }
+]
