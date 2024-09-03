@@ -24,9 +24,14 @@ app.listen(port, () => {
 });
 
 app.post("/api/bot", (req, res) => {
-  console.log("testts");
-  bot.processUpdate(req.body);
-  res.sendStatus(200);
+  try {
+    console.log("testts");
+    bot.processUpdate(req.body);
+    res.sendStatus(200);
+  } catch (err) {
+    console.error("Error processing update:", err);
+    res.sendStatus(500);
+  }
 });
 
 bot.setMyCommands([
