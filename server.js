@@ -10,6 +10,7 @@ const path = require("path");
 const port = process.env.PORT || 3000;
 const API_BOT_TOKEN = process.env.BOT_API_KEY;
 const url = process.env.URL_VERCEL;
+// const ngrokURL = process.env.NGROKURL_KEY;
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
 bot.setWebHook(`${url}/api/bot`);
+// bot.setWebHook(`${ngrokURL}/api/bot`);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
@@ -131,3 +133,5 @@ function extraerMatriculas(mensaje) {
 
   return matriculas;
 }
+
+module.exports = app;
