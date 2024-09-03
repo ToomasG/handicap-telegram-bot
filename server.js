@@ -13,11 +13,18 @@ const url = process.env.URL_VERCEL;
 
 const app = express();
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
 bot.setWebHook(`${url}/api/bot`);
 
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
 app.post("/api/bot", (req, res) => {
+  console.log("testts");
   bot.processUpdate(req.body);
   res.sendStatus(200);
 });
@@ -109,9 +116,6 @@ bot.on("tomi", (msg) => {
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, "escribiste tomii");
 });
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 function extraerMatriculas(mensaje) {
   // Remover el comando /handicap del mensaje
