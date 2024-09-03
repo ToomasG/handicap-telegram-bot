@@ -8,14 +8,13 @@ const dayjs = require("dayjs");
 const path = require("path");
 
 const app = express();
+app.use(express.json());
 const port = process.env.PORT || 3000;
 const API_BOT_TOKEN = process.env.BOT_API_KEY;
 const url = process.env.URL_VERCEL;
 
 const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
 bot.setWebHook(`${url}/api/bot`);
-
-app.use(express.json());
 
 app.post("/api/bot", (req, res) => {
   bot.processUpdate(req.body);
