@@ -14,7 +14,7 @@ const url = process.env.URL_VERCEL;
 const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
 bot.setWebHook(`${url}/api/bot`);
