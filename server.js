@@ -10,8 +10,17 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 const API_BOT_TOKEN = process.env.BOT_API_KEY;
+const url = process.env.URL_VERCEL;
 
-const bot = new TelegramBot(API_BOT_TOKEN, { polling: true });
+const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
+bot.setWebHook(`${url}/api/bot`);
+
+app.use(express.json());
+
+app.post("/api/bot", (req, res) => {
+  bot.processUpdate(req.body);
+  res.sendStatus(200);
+});
 
 bot.setMyCommands([
   { command: "/start", description: "Iniciar el bot" },
@@ -106,7 +115,7 @@ app.use(bodyParser.json());
 
 function extraerMatriculas(mensaje) {
   // Remover el comando /handicap del mensaje
-  const sinComando = mensaje.replace("/handicap", "").trim();
+  const sinComando = mensaje.replace("/handicapytarjetas", "").trim();
 
   // Separar las matrículas por comas y eliminar espacios adicionales
   const matriculas = sinComando.split(",").map((matricula) => matricula.trim());
