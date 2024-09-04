@@ -50,11 +50,11 @@ bot.setMyCommands([
   },
 ]);
 
-bot.on("message", (msg) => {
+bot.on("message", async (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
   console.log(msg.chat.id, "Recibí tu mensaje!");
-  bot
+  return bot
     .sendMessage(msg.chat.id, "Recibí tu mensaje!")
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
 });
