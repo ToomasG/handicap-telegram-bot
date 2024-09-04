@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-const bot = new TelegramBot(API_BOT_TOKEN, { polling: false });
+const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
 // bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
