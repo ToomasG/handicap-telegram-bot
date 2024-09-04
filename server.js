@@ -15,7 +15,7 @@ const url = process.env.URL_VERCEL;
 const app = express();
 app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 const bot = new TelegramBot(API_BOT_TOKEN, { webHook: { port: 443 } });
 // bot.setWebHook(`${url}/api/bot`);
@@ -51,7 +51,9 @@ bot.setMyCommands([
 ]);
 
 bot.on("message", (msg) => {
+  console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
+  console.log(msg.chat.id, "Recibí tu mensaje!");
   bot
     .sendMessage(msg.chat.id, "Recibí tu mensaje!")
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
