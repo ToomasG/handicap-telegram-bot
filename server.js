@@ -25,6 +25,10 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
+bot.on("webhook_error", (error) => {
+  console.log(error.code, "webohok error"); // => 'EPARSE'
+});
+
 app.post("/api/bot", (req, res) => {
   try {
     console.log(req.body, "req bodyyy");
@@ -47,12 +51,10 @@ bot.setMyCommands([
 ]);
 
 bot.on("message", (msg) => {
-  try {
-    console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
-    bot.sendMessage(msg.chat.id, "Recibí tu mensaje!"); // Responder al mensaje para probar la comunicación
-  } catch (error) {
-    console.error("Error sending message:", error);
-  }
+  console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
+  bot
+    .sendMessage(msg.chat.id, "Recibí tu mensaje!")
+    .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
 });
 
 bot.onText(/\/handicapytarjetas/, async (msg) => {
