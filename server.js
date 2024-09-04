@@ -27,7 +27,8 @@ app.listen(port, () => {
 
 app.post("/api/bot", (req, res) => {
   try {
-    console.log("testts");
+    console.log(req.body, "req bodyyy");
+    console.log(req, "req soloo");
     bot.processUpdate(req.body);
     res.sendStatus(200);
   } catch (err) {
