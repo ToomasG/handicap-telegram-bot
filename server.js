@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-const bot = new TelegramBot(API_BOT_TOKEN);
+const bot = new TelegramBot(API_BOT_TOKEN, { polling: false });
 bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
@@ -47,8 +47,12 @@ bot.setMyCommands([
 ]);
 
 bot.on("message", (msg) => {
-  console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
-  bot.sendMessage(msg.chat.id, "Recibí tu mensaje!"); // Responder al mensaje para probar la comunicación
+  try {
+    console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
+    bot.sendMessage(msg.chat.id, "Recibí tu mensaje!"); // Responder al mensaje para probar la comunicación
+  } catch (error) {
+    console.error("Error sending message:", error);
+  }
 });
 
 bot.onText(/\/handicapytarjetas/, async (msg) => {
