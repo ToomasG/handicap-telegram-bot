@@ -28,7 +28,7 @@ app.listen(port, () => {
 app.post("/api/bot", (req, res) => {
   try {
     console.log(req.body, "req bodyyy");
-    console.log(req, "req soloo");
+    // console.log(req, "req soloo");
     bot.processUpdate(req.body);
     res.sendStatus(200);
   } catch (err) {
@@ -45,6 +45,11 @@ bot.setMyCommands([
     description: "Consulta de handicap y creacion de tarjetas en pdf",
   },
 ]);
+
+bot.on("message", (msg) => {
+  console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
+  bot.sendMessage(msg.chat.id, "Recibí tu mensaje!"); // Responder al mensaje para probar la comunicación
+});
 
 bot.onText(/\/handicapytarjetas/, async (msg) => {
   const todayMiliseconds = dayjs().valueOf();
