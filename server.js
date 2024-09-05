@@ -17,7 +17,7 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-const bot = new TelegramBot(API_BOT_TOKEN, { webHook: true });
+const bot = new TelegramBot(API_BOT_TOKEN);
 // bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
@@ -27,6 +27,10 @@ app.listen(port, () => {
 
 bot.on("webhook_error", (error) => {
   console.log(error.code, "webohok error"); // => 'EPARSE'
+});
+
+bot.getWebhookInfo().then((info) => {
+  console.log("Webhook info:", info);
 });
 
 app.post("/api/bot", (req, res) => {
