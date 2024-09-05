@@ -29,10 +29,6 @@ bot.on("webhook_error", (error) => {
   console.log(error.code, "webohok error"); // => 'EPARSE'
 });
 
-bot.getWebhookInfo().then((info) => {
-  console.log("Webhook info:", info);
-});
-
 app.post("/api/bot", (req, res) => {
   try {
     console.log(req.body, "req bodyyy");
