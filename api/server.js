@@ -52,10 +52,10 @@ bot.getWebHookInfo((res) => {
 bot.on("message", (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
-  console.log(msg.chat.id, "Recibí tu mensaje!");
+  console.log(msg.chat.id, `"Recibí tu mensaje!" ${msg.chat.id}`);
   console.log(typeof msg.chat.id);
   bot
-    .sendMessage(msg.chat.id, `"Recibí tu mensaje!" ${msg.chat.id}`)
+    .sendMessage(`${msg.chat.id}`, `"Recibí tu mensaje!" ${msg.chat.id}`)
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
   console.log("Mensaje enviadooooooooo");
 });
