@@ -29,7 +29,7 @@ bot.on("webhook_error", (error) => {
   console.log(error.code, "webohok error"); // => 'EPARSE'
 });
 
-app.post("/api/bot", (req, res) => {
+app.post("/api", (req, res) => {
   try {
     console.log(req.body, "req bodyyy");
     // console.log(req, "req soloo");
