@@ -17,7 +17,7 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-const bot = new TelegramBot(API_BOT_TOKEN);
+const bot = new TelegramBot(API_BOT_TOKEN, { polling: false });
 // bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
@@ -57,6 +57,7 @@ module.exports = bot.on("message", async (msg) => {
   await bot
     .sendMessage(msg.chat.id, "Recibí tu mensaje!")
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
+  console.log("Mensaje enviadooooooooo");
 });
 
 bot.onText(/\/handicapytarjetas/, async (msg) => {
