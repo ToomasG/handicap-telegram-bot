@@ -34,21 +34,21 @@ app.post("/api/bot", (req, res) => {
     console.log(req.body, "req bodyyy");
     // console.log(req, "req soloo");
     bot.processUpdate(req.body);
-    res.sendStatus(200);
+    res.sendStatus(200).json("OK");
   } catch (err) {
     console.error("Error processing update:", err);
     res.sendStatus(500);
   }
 });
 
-bot.setMyCommands([
-  { command: "/start", description: "Iniciar el bot" },
-  { command: "/handicap", description: "Consultar tu handicap" },
-  {
-    command: "/handicapytarjetas",
-    description: "Consulta de handicap y creacion de tarjetas en pdf",
-  },
-]);
+// bot.setMyCommands([
+//   { command: "/start", description: "Iniciar el bot" },
+//   { command: "/handicap", description: "Consultar tu handicap" },
+//   {
+//     command: "/handicapytarjetas",
+//     description: "Consulta de handicap y creacion de tarjetas en pdf",
+//   },
+// ]);
 
 bot.on("message", async (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
