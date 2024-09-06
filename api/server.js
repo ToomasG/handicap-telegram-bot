@@ -18,15 +18,10 @@ app.use(express.json());
 // app.use(bodyParser.json());
 
 const bot = new TelegramBot(API_BOT_TOKEN, { polling: false });
-bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-});
-
-bot.on("webhook_error", (error) => {
-  console.log(error.code, "webohok error"); // => 'EPARSE'
 });
 
 app.post("/api/bot", (req, res) => {
@@ -39,6 +34,10 @@ app.post("/api/bot", (req, res) => {
     console.error("Error processing update:", err);
     res.sendStatus(500);
   }
+});
+
+bot.getWebHookInfo((res) => {
+  console.log(res);
 });
 
 // bot.setMyCommands([
