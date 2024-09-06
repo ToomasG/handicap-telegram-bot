@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "public": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "api/server.js"
-    }
-  ],
-  "redirects": [{ "source": "/", "destination": "/api", "permanent": false }]
+  "builds": [{ "src": "api/server.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/api/bot", "dest": "api/server.js" }]
 }
