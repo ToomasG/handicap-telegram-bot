@@ -18,7 +18,7 @@ app.use(express.json());
 // app.use(bodyParser.json());
 
 const bot = new TelegramBot(API_BOT_TOKEN, { polling: false });
-// bot.setWebHook(`${url}/api/bot`);
+bot.setWebHook(`${url}/api/bot`);
 // bot.setWebHook(`${ngrokURL}/api/bot`);
 
 app.listen(port, () => {
@@ -50,11 +50,11 @@ app.post("/api/bot", (req, res) => {
 //   },
 // ]);
 
-module.exports = bot.on("message", async (msg) => {
+bot.on("message", (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
   console.log(msg.chat.id, "Recibí tu mensaje!");
-  await bot
+  bot
     .sendMessage(msg.chat.id, "Recibí tu mensaje!")
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
   console.log("Mensaje enviadooooooooo");
