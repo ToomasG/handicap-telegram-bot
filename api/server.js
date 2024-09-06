@@ -29,7 +29,7 @@ app.post("/api/bot", (req, res) => {
     console.log(req.body, "req bodyyy");
     // console.log(req, "req soloo");
     bot.processUpdate(req.body);
-    // res.sendStatus(200).json("OK");
+    res.sendStatus(200);
   } catch (err) {
     console.error("Error processing update:", err);
     res.sendStatus(500);
