@@ -50,7 +50,7 @@ app.post("/api/bot", (req, res) => {
 //   },
 // ]);
 
-bot.on("message", async (msg) => {
+module.exports = bot.on("message", async (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log("Message received:", msg); // Verificar que el bot recibe el mensaje
   console.log(msg.chat.id, "Recibí tu mensaje!");
