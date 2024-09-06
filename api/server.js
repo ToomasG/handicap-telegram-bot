@@ -55,7 +55,7 @@ bot.on("message", (msg) => {
   console.log(msg.chat.id, "Recibí tu mensaje!");
   console.log(typeof msg.chat.id);
   bot
-    .sendMessage(msg.chat.id, "Recibí tu mensaje!")
+    .sendMessage(msg.chat.id, `"Recibí tu mensaje!" ${msg.chat.id}`)
     .catch((error) => console.log(error, "error al amndar el msje")); // Responder al mensaje para probar la comunicación
   console.log("Mensaje enviadooooooooo");
 });
