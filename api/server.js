@@ -131,13 +131,6 @@ bot.onText(/\/help/, (msg) => {
 //   bot.sendMessage(chatId, "holaaaa");
 // });
 
-bot.on("tomi", (msg) => {
-  const chatId = msg.chat.id;
-
-  // send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatId, "escribiste tomii");
-});
-
 function extraerMatriculas(mensaje) {
   // Remover el comando /handicap del mensaje
   const sinComando = mensaje.replace("/handicapytarjetas", "").trim();
